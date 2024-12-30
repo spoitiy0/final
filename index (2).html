@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admission Form</title>
+    <script language="javascript">
+        function calculate  () {
+          var a,b,c,d,e,f,g,z;
+
+    a = parseFloat(document.form1.s1.value)||0;
+    b = parseFloat(document.form1.s2.value)||0 ;
+    c = parseFloat(document.form1.s3.value)||0; 
+    d = parseFloat(document.form1.s4.value) ||0;
+    e = parseFloat(document.form1.s5.value)||0 ;
+    f = parseFloat(document.form1.s6.value)||0 ;
+    g = a+b+c+d+e+f;
+    z=g/480*100;
+ document.write("<h1> Total percentages:-</h1>"+z)
+        }
+    </script>
+</head>
+<body bgcolor="sky blue">
+    <h1>Admission Form</h1>
+    <form name="form1">
+        First Name: <input type="text" name="fname"><br><br>
+        Last Name: <input type="text" name="lname"><br><br>
+Select your board:- <select>
+ <option>SSC board </option>
+<option>CBSE board </option>
+<option> ICSE board</option></select> <br><br>
+        School Name: <input type="text" name="sname"><br><br>
+
+        Gender: 
+        <input type="radio" name="gender" value="male"> Male
+        <input type="radio" name="gender" value="female"> Female<br><br>
+
+        Enter your subject marks outoff 80:<br><br>
+        English: <input type="text" name="s1"><br>
+        Marathi: <input type="text" name="s2"><br>
+        Hindi: <input type="text" name="s3"><br>
+        Mathematics: <input type="text" name="s4"><br>
+        Science: <input type="text" name="s5"><br>
+        History and Geography: <input type="text" name="s6"><br><br>
+
+        <input type="button" value="Submit" onClick="calculate  ()">
+    </form>
+</body>
+</html>
